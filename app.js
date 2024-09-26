@@ -7,4 +7,4 @@ const instance = new Razorpay({
     key_secret: process.env.RAZORPAY_APT_SECRET,
 });
 
-export default instance;
+export { instance };
