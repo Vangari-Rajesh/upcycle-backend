@@ -44,12 +44,8 @@ app.get("/api/getkey", (req, res) =>
   res.status(200).json({ key: process.env.RAZORPAY_API_KEY })
 );
 
-// Export the app and instance
-export { app, instance };
-
-// Listen on the specified port if needed
-if (process.env.PORT) {
   app.listen(process.env.PORT, () => {
     console.log("Server running on port " + process.env.PORT);
   });
-}
+  
+export { app, instance };
